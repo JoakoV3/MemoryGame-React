@@ -19,7 +19,7 @@ function App() {
   let i = 0;
   return (
     <div className="App">
-      <Board className="Board w-11/12 sm:w-2/3 md:w-1/2">{cards.map((card) => <RenderCard key={card.id}/>)}</Board>
+      <Board className="Board w-11/12 sm:w-2/3 md:w-1/2">{cards.map(RenderCard)}</Board>
     </div>
   );
 }

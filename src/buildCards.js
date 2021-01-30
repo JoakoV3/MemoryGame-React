@@ -1,14 +1,14 @@
 export function buildCards() {
   let id = 0
   const images = {
-    angular: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1200px-Angular_full_color_logo.svg.png',
-    css: 'https://blog.leonhassan.co.uk/content/images/2019/09/css3.svg',
-    html: 'https://assets.stickpng.com/thumbs/5847f5bdcef1014c0b5e489c.png',
-    go: 'https://blog.golang.org/go-brand/Go-Logo/PNG/Go-Logo_Aqua.png',
-    rail: 'https://pbs.twimg.com/media/CZGHPChUAAA3jqE.png',
-    react: 'https://axaguildev.github.io/react-toolkit/latest/storybook/images/react.svg',
-    nodejs: 'https://www.ambientinfotech.com/wp-content/uploads/2020/03/node-js.png',
-    vue: 'https://assets.stickpng.com/images/58482acecef1014c0b5e4a1e.png',
+    angular: 'https://github.com/JoakoV3/MemoryGame-React/blob/master/angular.png?raw=true',
+    css: 'https://raw.githubusercontent.com/JoakoV3/MemoryGame-React/fe1e293e100e3c71c74402a89e4bc40b1e3f2ed2/css3.svg',
+    html: 'https://github.com/JoakoV3/MemoryGame-React/blob/master/5847f5bdcef1014c0b5e489c.png?raw=true',
+    go: 'https://github.com/JoakoV3/MemoryGame-React/blob/master/Go.png?raw=true',
+    rail: 'https://github.com/JoakoV3/MemoryGame-React/blob/master/rails.png?raw=true',
+    react: 'https://raw.githubusercontent.com/JoakoV3/MemoryGame-React/fe1e293e100e3c71c74402a89e4bc40b1e3f2ed2/react.svg',
+    nodejs: 'https://raw.githubusercontent.com/JoakoV3/MemoryGame-React/master/nodejs.png',
+    vue: 'https://github.com/JoakoV3/MemoryGame-React/blob/master/vue.png?raw=true',
   }
 
   //recorre el array de imagenes y crea una carta para cada key
@@ -16,7 +16,7 @@ export function buildCards() {
     const createCard = () => ({
       id: id++,
       type: key,
-      backImg: 'https://www.shareicon.net/data/256x256/2015/10/07/113773_tags_512x512.png',
+      backImg: 'https://raw.githubusercontent.com/JoakoV3/MemoryGame-React/master/nodejs.png',
       frontImg: images[key],
       flipped: true
     })
