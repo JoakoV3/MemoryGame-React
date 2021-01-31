@@ -11,12 +11,21 @@ export function buildCards() {
     vue: 'https://github.com/JoakoV3/MemoryGame-React/blob/master/vue.png?raw=true',
   }
 
+  const shuffle = (arr) => {
+    for(let i = arr.length - 1; i > 0; i--){
+      const j = Math.floor(Math.random() * i)
+      const temp = arr[i]
+      arr[i] = arr[j]
+      arr[j] = temp
+    }
+    return arr
+  }
   //recorre el array de imagenes y crea una carta para cada key
   const cards = Object.keys(images).reduce((result, key) => {
     const createCard = () => ({
       id: id++,
       type: key,
-      backImg: 'https://raw.githubusercontent.com/JoakoV3/MemoryGame-React/master/nodejs.png',
+      backImg: 'https://github.com/JoakoV3/MemoryGame-React/blob/master/backImage.png?raw=true',
       frontImg: images[key],
       flipped: true
     })
@@ -24,5 +33,5 @@ export function buildCards() {
     result.push(createCard())
     return result
   }, [])
-  return cards
+  return shuffle(cards);
 }
